@@ -18,7 +18,7 @@ fuel = st.number_input("Fuel Price Index")
 if st.button("Predict Revenue Class"):
 
     X = np.array([[units, price, bev, premium, gdp, fuel]])
-    X = scaler.transform(X)
+    X = model.transform(X)
 
     prediction = model.predict(X)
 
