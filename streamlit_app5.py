@@ -17,14 +17,15 @@ gdp = st.number_input("GDP Growth")
 fuel = st.number_input("Fuel Price Index")
 
 if st.button("Predict Revenue Class"):
-     input_data = pd.DataFrame([{
-        'Units_Sold':                  units,
-        'Avg_Price_EUR':       price,
-        'BEV_Share':                   bev,
-        'Premium_Share':                premium,
-        'GDP_Growth':         gdp,
-        'Fuel_Price_Index':  fuel,
-         }])
+
+    input_data = pd.DataFrame([{
+        'Units_Sold': units,
+        'Avg_Price_EUR': price,
+        'BEV_Share': bev,
+        'Premium_Share': premium,
+        'GDP_Growth': gdp,
+        'Fuel_Price_Index': fuel,
+    }])
 
     prediction = model.predict(input_data)
 
