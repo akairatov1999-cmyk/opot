@@ -17,7 +17,6 @@ gdp = st.number_input("GDP Growth")
 fuel = st.number_input("Fuel Price Index")
 
 if st.button("Predict Revenue Class"):
-
      input_data = pd.DataFrame([{
         'Units_Sold':                  units,
         'Avg_Price_EUR':       price,
@@ -27,7 +26,7 @@ if st.button("Predict Revenue Class"):
         'Fuel_Price_Index':  fuel,
          }])
 
-    prediction = model.predict(X)
+    prediction = model.predict(input_data)
 
     if prediction[0] == 1:
         st.success("High Revenue")
