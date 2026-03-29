@@ -5,7 +5,6 @@ import joblib
 st.title("BMW Revenue Prediction")
 
 model = joblib.load("model.joblib")
-scaler = joblib.load("scaler.joblib")
 
 st.write("Enter BMW sales indicators")
 
